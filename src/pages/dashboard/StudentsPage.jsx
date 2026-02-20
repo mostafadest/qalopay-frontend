@@ -6,8 +6,7 @@ import { Search, Plus, Upload, Loader2, User, MoreVertical, X } from 'lucide-rea
 import { useToast } from '@/components/ui/use-toast';
 
 // Safe string handling function
-const safe = (v) => typeof v === 'string' ? v.trim().toLowerCase() : '';
-
+String(v || '').trim()
 const StudentsPage = () => {
   const { school } = useOutletContext();
   const { toast } = useToast();

@@ -5,12 +5,11 @@ import { supabase } from '@/lib/supabase';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, PieChart, Pie, Cell, Legend } from 'recharts';
 import { Users, FileText, Clock, DollarSign } from 'lucide-react';
 import { Loader2 } from 'lucide-react';
-
+String(v || '').trim()
 const COLORS = ['#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
 
 // Safe string handling function
-const safe = (v) => typeof v === 'string' ? v.trim().toLowerCase() : '';
-
+String(v || '').trim()
 const KPICard = ({ title, value, icon: Icon, color, subtext }) => (
   <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
     <div className="flex justify-between items-start mb-4">

@@ -4,8 +4,7 @@ import { useOutletContext } from 'react-router-dom';
 import { Crown, CheckCircle, AlertTriangle } from 'lucide-react';
 
 // Safe string handling function
-const safe = (v) => typeof v === 'string' ? v.trim().toLowerCase() : '';
-
+String(v || '').trim()
 const SubscriptionPage = () => {
   const { school } = useOutletContext();
 

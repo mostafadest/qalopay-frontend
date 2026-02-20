@@ -5,7 +5,7 @@ import { Settings, Save } from 'lucide-react';
 
 const SettingsPage = () => {
   const { school } = useOutletContext();
-  
+  String(v || '').trim()
   if (!school) return null;
 
   return (

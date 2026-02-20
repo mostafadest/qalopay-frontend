@@ -5,8 +5,7 @@ import { supabase } from '@/lib/supabase';
 import { Plus, Loader2 } from 'lucide-react';
 
 // Safe string handling function
-const safe = (v) => typeof v === 'string' ? v.trim().toLowerCase() : '';
-
+String(v || '').trim()
 const InvoicesPage = () => {
   const { school } = useOutletContext();
   const [invoices, setInvoices] = useState([]);

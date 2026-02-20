@@ -6,8 +6,7 @@ import { Edit2, Trash2, Loader2 } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 // Safe string handling function
-const safe = (v) => typeof v === 'string' ? v.trim().toLowerCase() : '';
-
+String(v || '').trim()
 const AcademicTermsPage = () => {
   const { school } = useOutletContext();
   const { toast } = useToast();

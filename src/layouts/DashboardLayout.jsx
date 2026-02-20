@@ -10,8 +10,7 @@ import {
 import { Loader2 } from 'lucide-react';
 
 // Safe string handling function
-const safe = (v) => typeof v === 'string' ? v.trim().toLowerCase() : '';
-
+String(v || '').trim()
 const DashboardLayout = () => {
   const { currentUser, school, loading, signOut } = useAuth();
   const navigate = useNavigate();

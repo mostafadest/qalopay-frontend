@@ -51,8 +51,7 @@ export default function iframeRouteRestorationPlugin() {
 
                 requestAnimationFrame(() => setTimeout(() => {
                   try {
-                    const text = (document.body?.innerText || '').trim();
-
+String(v || '').trim()
                     // If the restored route results in too little content, assume it is invalid and navigate home
                     if (text.length < 50) {
                       replaceHistoryState('/');
