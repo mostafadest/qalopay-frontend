@@ -1,0 +1,12 @@
+## Pages
+- [QaloPay - إدارة وتحصيل أقساط مدرستك بدون تعقيد](/home): تابع الطلاب، أنشئ الفواتير وسوّي المدفوعات من جميع طرق الدفع في مكان واحد
+- [QaloPay - لوحة الإدارة العليا](/superadmindashboard): No description available
+- [إضافة مدرسة جديدة - لوحة الإدارة](/admincreateschool): No description available
+- [اتصل بنا - QaloPay](/contact): تواصل مع فريق QaloPay - نحن هنا لمساعدتك في إدارة مدفوعات مدرستك بكل سهولة
+- [الأسعار - QaloPay](/pricing): خطط مرنة تناسب حجم مدرستك - تواصل معنا للبدء
+- [المميزات - QaloPay](/features): كل مدفوعات مدرستك في لوحة تحكم واحدة - QaloPay يوفر لك نظام متكامل لإدارة الطلاب والفواتير والمدفوعات
+- [تسجيل الدخول - QaloPay](/login): No description available
+- [تسجيل مدرسة جديدة - QaloPay](/registerschool): No description available
+- [غير مصرح بالوصول - QaloPay](/unauthorized): No description available
+- [لوحة التحكم -](/dashboard): No description available
+- [من نحن - QaloPay](/about): QaloPay شركة تقنية مصرية متخصصة في تقديم حلول التكنولوجيا للمؤسسات التعليمية
