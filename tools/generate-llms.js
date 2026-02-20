@@ -3,6 +3,14 @@
 import fs from 'fs';
 import path from 'path';
 
+// Safe trim function
+function safeTrim(str) {
+  if (typeof str === 'string') {
+    return str.trim();
+  }
+  return '';
+}
+
 const CLEAN_CONTENT_REGEX = {
   comments: /\/\*[\s\S]*?\*\/|\/\/.*$/gm,
   templateLiterals: /`[\s\S]*?`/g,
@@ -19,12 +27,12 @@ const CLEAN_CONTENT_REGEX = {
 
 const EXTRACTION_REGEX = {
   route: /<Route\s+[^>]*>/g,
-  path: /path=["']([^"']+)["']/,
-  element: /element=\{<(\w+)[^}]*\/?\s*>\}/,
+  path: /path=["']([^"']+)["']/,  
+  element: /element=\{<([\w]+)[^}]*\/?>}/,
   helmet: /<Helmet[^>]*?>([\s\S]*?)<\/Helmet>/i,
   helmetTest: /<Helmet[\s\S]*?<\/Helmet>/i,
   title: /<title[^>]*?>\s*(.*?)\s*<\/title>/i,
-  description: /<meta\s+name=["']description["']\s+content=["'](.*?)["']/i
+  description: /<meta\s+name=["']description["']\s+content=["'](.*?)['"]\/?>/i
 };
 
 function cleanContent(content) {
@@ -39,11 +47,11 @@ function cleanText(text) {
   
   return text
     .replace(CLEAN_CONTENT_REGEX.jsxExpressions, '')
-    .replace(CLEAN_CONTENT_REGEX.htmlEntities.quot, '"')
+    .replace(CLEAN_CONTENT_REGEX.htmlEntities.quotes, '"')
     .replace(CLEAN_CONTENT_REGEX.htmlEntities.amp, '&')
     .replace(CLEAN_CONTENT_REGEX.htmlEntities.lt, '<')
     .replace(CLEAN_CONTENT_REGEX.htmlEntities.gt, '>')
-    .replace(CLEAN_CONTENT_REGEX.htmlEntities.apos, "'")
+    .replace(CLEAN_CONTENT_REGEX.htmlEntities.apos, '"')
     .trim();
 }
 

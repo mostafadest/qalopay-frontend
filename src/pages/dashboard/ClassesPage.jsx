@@ -1,9 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
 import { Loader2, Trash2 } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { safeTrim } from '@/utils/safeTrim';
 
 const ClassesPage = () => {
   const { school } = useOutletContext();
@@ -29,7 +29,7 @@ const ClassesPage = () => {
 
   const handleAdd = async (e) => {
     e.preventDefault();
-    const safeName = String(newClass || '');
+    const safeName = safeTrim(newClass);
     if (!safeName) return;
 
     try {
@@ -69,7 +69,7 @@ const ClassesPage = () => {
              {loading ? <Loader2 className="animate-spin" /> : classes.map(cls => (
                 <div key={cls.id} className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center group">
                    <div>
-                      <h4 className="font-bold text-lg text-dark-purple">{String(cls.name || '')}</h4>
+                      <h4 className="font-bold text-lg text-dark-purple">{safeTrim(cls.name)}</h4>
                       <p className="text-xs text-gray-500">{cls.students?.[0]?.count || 0} طالب</p>
                    </div>
                    <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-red-50 group-hover:text-red-500 transition-colors cursor-pointer">
