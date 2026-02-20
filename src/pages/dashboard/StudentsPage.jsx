@@ -5,8 +5,6 @@ import { supabase } from '@/lib/supabase';
 import { Search, Plus, Upload, Loader2, User, MoreVertical, X } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
-// Safe string handling function
-String(v || '').trim()
 const StudentsPage = () => {
   const { school } = useOutletContext();
   const { toast } = useToast();

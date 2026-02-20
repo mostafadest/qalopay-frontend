@@ -4,8 +4,6 @@ import { useOutletContext } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
 import { Plus, Loader2 } from 'lucide-react';
 
-// Safe string handling function
-String(v || '').trim()
 const InvoicesPage = () => {
   const { school } = useOutletContext();
   const [invoices, setInvoices] = useState([]);

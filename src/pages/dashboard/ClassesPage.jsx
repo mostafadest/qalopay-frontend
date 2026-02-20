@@ -5,8 +5,6 @@ import { supabase } from '@/lib/supabase';
 import { Loader2, Trash2 } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
-// Safe string handling function
-String(v || '').trim()
 const ClassesPage = () => {
   const { school } = useOutletContext();
   const { toast } = useToast();

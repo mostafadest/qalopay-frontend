@@ -9,8 +9,6 @@ import {
 } from 'lucide-react';
 import { Loader2 } from 'lucide-react';
 
-// Safe string handling function
-String(v || '').trim()
 const DashboardLayout = () => {
   const { currentUser, school, loading, signOut } = useAuth();
   const navigate = useNavigate();
